@@ -1,0 +1,236 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JDS</title>
+    <style> body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(hsl(240, 100%, 25%),#ff0000);;
+        }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    gap: 15px;
+    min-height: 50px;
+    padding: 10px;
+        }
+
+header {
+    grid-area: header;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    border-radius: 10px;
+    top: 0;
+  background: linear-gradient(hsl(240, 100%, 25%),#ff0000);;   
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.aside {
+    grid-area: sidebar;
+    background: linear-gradient(hsl(240, 100%, 25%),#ff0000);;            
+    padding: 10px;
+    position: sticky;
+    top: 0; 
+    align-self: start;
+    height: 100vh;
+}
+
+.aside h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    font-style: bold;
+}
+
+.aside ul {
+    list-style: none;             
+    padding: 0;
+    margin: 0;
+}
+
+.aside li {
+    padding: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.582); 
+    color: #000000;
+    font-size: 15px;
+    font-style: normal;
+    border-radius: 6px;
+    gap: 20px;
+}
+.aside li:hover {
+    background: linear-gradient(hsl(240, 100%, 25%),#ff0000);; 
+    color: #ffffff;
+}
+
+
+ main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    
+}
+
+.box {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    height: 300px;
+}
+        
+.box:hover{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px ;
+    background: linear-gradient(hsl(240, 100%, 25%),#ff0000);; 
+
+}
+       
+.box h1{
+    font-size: 20px;
+    color: #020000;   
+}
+
+.box p {
+    font-size: 15px;
+    color: #020000;
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.facts > h2 {
+  font-size: 20px;
+  color: white
+}
+
+.facts li {
+  margin-bottom: 5px;
+ border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  width: 250px;
+  height: 200px;
+  text-align: justify;
+  color:#ffffff
+}
+
+footer {
+    grid-area: footer;
+   background: linear-gradient(hsl(240, 100%, 25%),#ff0000);; 
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    padding: 35px;
+    z-index: 10;
+}
+
+@media (min-width: 600px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
+}
+
+@media (min-width: 768px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+
+    <header>
+        <h1>PETRON GASOLINE STATION</h1>
+    </header>
+
+    <div class="aside">
+        <h2>OBJECTIVES</h2>
+        <ul>
+            <li>MY LOGO</li>
+            <li>XCS</li>
+            <li>XTRA ADVANCE</li>
+            <li>BLAZE 100</li>
+            <li>TURBO DIESEL</li>
+            <li>DIESEL MAX</li>
+        </ul>
+    </div>
+
+    <main>
+
+        <div class="box">
+            <img src="depositphotos_439731172-stock-illustration-initial-letter-logotype-company-name.jpg" alt="">
+            <h1>MY PROFILE</h1>
+            <p>JD's LOGO</p>
+        </div>
+
+        <div class="box">
+             <img src="XCS.JPEG" alt="">
+            <h1>XCS</h1>
+            <p>95 Octane</p>
+        </div>
+
+        <div class="box">
+             <img src="XTRA.jfif" alt="">
+            <h1>XTRA ADVANCE</h1>
+            <p>91 Octane</p>
+        </div>
+
+        <div class="box">
+             <img src="images (9).jpeg" alt="">
+            <h1>BLAZE 100</h1>
+            <p>100 Octane</p>
+        </div>
+
+        <div class="box">
+             <img src="TURBO.jfif" alt="">
+            <h1>TURBO DIESEL</h1>
+            <p>High Performance Diesel</p>
+        </div>
+
+        <div class="box">
+             <img src="DIESEL (2).jPEG" alt="">
+            <h1>DIESEL MAX</h1>
+            <p>Tough outside. Clean Inside</p>
+        </div>  
+    </main>
+
+<div class="facts">
+  <h2>How can we help you?</h2>
+  <ul>
+    <li>Petron Corporation is the largest oil company in the Philippines, and a leading player in Malaysia.Our world-class petroleum products and petrochemicals fuel industries and the daily lives of millions of Filipinos and Malaysians, enabling growth and success in the communities we are proud to serve.</li>
+  </ul>
+</div>
+
+    <footer>
+        @ PETRON INC.
+    </footer>
+
+</div>
+
+</body>
+</html>
